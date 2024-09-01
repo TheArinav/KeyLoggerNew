@@ -102,9 +102,6 @@
 		<Unit filename="/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.cpp">
 			<Option target="keylogger_user"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.h">
-			<Option target="keylogger_user"/>
-		</Unit>
 		<Unit filename="/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp">
 			<Option target="keylogger_user"/>
 		</Unit>

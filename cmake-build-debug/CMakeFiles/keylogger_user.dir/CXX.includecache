@@ -13,11 +13,13 @@ cstdlib
 -
 stdexcept
 -
+thread
+-
+memory
+-
+mutex
+-
 usr_src/kmod_comms/NetlinkReceiver.hpp
-/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp
-
-/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.cpp
-NetlinkReceiver.hpp
 /tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp
 
 /tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp
