@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o CMakeFiles/keylogger_user.dir/usr_main.cpp.o  -o bin/keylogger_user  -lnl-3 -lnl-genl-3 -lnl-3 -lpthread -lnl-genl-3 -lpthread 

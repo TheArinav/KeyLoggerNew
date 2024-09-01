@@ -1,0 +1,1 @@
+cmd_/tmp/tmp.CWNLaQDUow/cmake-build-debug/hello.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /tmp/tmp.CWNLaQDUow/cmake-build-debug/hello.ko /tmp/tmp.CWNLaQDUow/cmake-build-debug/hello.o /tmp/tmp.CWNLaQDUow/cmake-build-debug/hello.mod.o;  true

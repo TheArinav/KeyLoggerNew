@@ -1,0 +1,1 @@
+cmd_/tmp/tmp.CWNLaQDUow/cmake-build-debug/Module.symvers := sed 's/\.ko$$/\.o/' /tmp/tmp.CWNLaQDUow/cmake-build-debug/modules.order | scripts/mod/modpost -m -a  -o /tmp/tmp.CWNLaQDUow/cmake-build-debug/Module.symvers -e -i Module.symvers   -T -
