@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/tmp/tmp.CWNLaQDUow/usr_main.cpp
+/tmp/KeyLoggerNew/usr_main.cpp
 iostream
 -
 cstdlib
@@ -20,9 +20,19 @@ memory
 mutex
 -
 usr_src/kmod_comms/NetlinkReceiver.hpp
-/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp
+/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.hpp
 
-/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp
+/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.cpp
+NetlinkReceiver.hpp
+/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.hpp
+fcntl.h
+-
+thread
+-
+chrono
+-
+
+/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.hpp
 sys/socket.h
 -
 netlink/netlink.h

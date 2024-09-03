@@ -1,5 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /tmp/tmp.CWNLaQDUow -B /tmp/tmp.CWNLaQDUow/cmake-build-debug
-CMake Error: The source "/tmp/tmp.CWNLaQDUow/kernel_module/CMakeLists.txt" does not match the source "/tmp/tmp.CWNLaQDUow/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /tmp/KeyLoggerNew -B /tmp/KeyLoggerNew/cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: /tmp/tmp.CWNLaQDUow/cmake-build-debug
+-- Build files have been written to: /tmp/KeyLoggerNew/cmake-build-debug

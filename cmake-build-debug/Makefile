@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.CWNLaQDUow
+CMAKE_SOURCE_DIR = /tmp/KeyLoggerNew
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.CWNLaQDUow/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/KeyLoggerNew/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles /tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,17 +124,30 @@ keylogger_user/fast:
 .PHONY : keylogger_user/fast
 
 #=============================================================================
-# Target rules for targets named build_kernel_module
+# Target rules for targets named keylogger
 
 # Build rule for target.
-build_kernel_module: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 build_kernel_module
-.PHONY : build_kernel_module
+keylogger: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keylogger
+.PHONY : keylogger
 
 # fast build rule for target.
-build_kernel_module/fast:
-	$(MAKE) -f CMakeFiles/build_kernel_module.dir/build.make CMakeFiles/build_kernel_module.dir/build
-.PHONY : build_kernel_module/fast
+keylogger/fast:
+	$(MAKE) -f kernel_module/CMakeFiles/keylogger.dir/build.make kernel_module/CMakeFiles/keylogger.dir/build
+.PHONY : keylogger/fast
+
+#=============================================================================
+# Target rules for targets named driver
+
+# Build rule for target.
+driver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 driver
+.PHONY : driver
+
+# fast build rule for target.
+driver/fast:
+	$(MAKE) -f kernel_module/CMakeFiles/driver.dir/build.make kernel_module/CMakeFiles/driver.dir/build
+.PHONY : driver/fast
 
 usr_main.o: usr_main.cpp.o
 
@@ -199,7 +212,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... keylogger_user"
-	@echo "... build_kernel_module"
+	@echo "... keylogger"
+	@echo "... driver"
 	@echo "... usr_main.o"
 	@echo "... usr_main.i"
 	@echo "... usr_main.s"

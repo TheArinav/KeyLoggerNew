@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/tmp/tmp.CWNLaQDUow/usr_src -I/usr/include/libnl3 
+CXX_INCLUDES = -I/tmp/KeyLoggerNew/usr_src -I/usr/include/libnl3 
 

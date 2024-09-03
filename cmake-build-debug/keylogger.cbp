@@ -5,46 +5,46 @@
 		<Option title="keylogger"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\kernel_module\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/tmp/tmp.CWNLaQDUow/cmake-build-debug"/>
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/tmp/tmp.CWNLaQDUow/cmake-build-debug"/>
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/tmp/tmp.CWNLaQDUow/cmake-build-debug"/>
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="keylogger_user">
-				<Option output="/tmp/tmp.CWNLaQDUow/cmake-build-debug/bin/keylogger_user" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.CWNLaQDUow/cmake-build-debug"/>
+				<Option output="/tmp/KeyLoggerNew/cmake-build-debug/bin/keylogger_user" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/tmp/tmp.CWNLaQDUow/usr_src"/>
+					<Add directory="/tmp/KeyLoggerNew/usr_src"/>
 					<Add directory="/usr/include/libnl3"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
@@ -55,20 +55,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 keylogger_user"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 keylogger_user"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="keylogger_user/fast">
-				<Option output="/tmp/tmp.CWNLaQDUow/cmake-build-debug/bin/keylogger_user" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.CWNLaQDUow/cmake-build-debug"/>
+				<Option output="/tmp/KeyLoggerNew/cmake-build-debug/bin/keylogger_user" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/tmp/tmp.CWNLaQDUow/usr_src"/>
+					<Add directory="/tmp/KeyLoggerNew/usr_src"/>
 					<Add directory="/usr/include/libnl3"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
@@ -79,34 +79,47 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 keylogger_user/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 keylogger_user/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="build_kernel_module">
-				<Option working_dir="/tmp/tmp.CWNLaQDUow/cmake-build-debug"/>
+			<Target title="keylogger">
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug/kernel_module"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 build_kernel_module"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/tmp.CWNLaQDUow/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 keylogger"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="driver">
+				<Option working_dir="/tmp/KeyLoggerNew/cmake-build-debug/kernel_module"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 driver"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.CWNLaQDUow/usr_main.cpp">
+		<Unit filename="/tmp/KeyLoggerNew/usr_main.cpp">
 			<Option target="keylogger_user"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.cpp">
+		<Unit filename="/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.cpp">
 			<Option target="keylogger_user"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.hpp">
+		<Unit filename="/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.hpp">
 			<Option target="keylogger_user"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.CWNLaQDUow/CMakeLists.txt">
+		<Unit filename="/tmp/KeyLoggerNew/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/tmp/KeyLoggerNew/kernel_module/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\kernel_module\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

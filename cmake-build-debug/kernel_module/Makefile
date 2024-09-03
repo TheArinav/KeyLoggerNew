@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.CWNLaQDUow
+CMAKE_SOURCE_DIR = /tmp/KeyLoggerNew
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.CWNLaQDUow/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/KeyLoggerNew/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,16 +67,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles /tmp/tmp.CWNLaQDUow/cmake-build-debug/kernel_module/CMakeFiles/progress.marks
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles 0
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles /tmp/KeyLoggerNew/cmake-build-debug/kernel_module/CMakeFiles/progress.marks
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/clean
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,37 +97,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/preinstall
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/preinstall
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-kernel_module/CMakeFiles/dummy_target.dir/rule:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/CMakeFiles/dummy_target.dir/rule
-.PHONY : kernel_module/CMakeFiles/dummy_target.dir/rule
+kernel_module/CMakeFiles/keylogger.dir/rule:
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/CMakeFiles/keylogger.dir/rule
+.PHONY : kernel_module/CMakeFiles/keylogger.dir/rule
 
 # Convenience name for target.
-dummy_target: kernel_module/CMakeFiles/dummy_target.dir/rule
+keylogger: kernel_module/CMakeFiles/keylogger.dir/rule
 
-.PHONY : dummy_target
+.PHONY : keylogger
 
 # fast build rule for target.
-dummy_target/fast:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/dummy_target.dir/build.make kernel_module/CMakeFiles/dummy_target.dir/build
-.PHONY : dummy_target/fast
+keylogger/fast:
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/keylogger.dir/build.make kernel_module/CMakeFiles/keylogger.dir/build
+.PHONY : keylogger/fast
 
 # Convenience name for target.
 kernel_module/CMakeFiles/driver.dir/rule:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/CMakeFiles/driver.dir/rule
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 kernel_module/CMakeFiles/driver.dir/rule
 .PHONY : kernel_module/CMakeFiles/driver.dir/rule
 
 # Convenience name for target.
@@ -137,35 +137,8 @@ driver: kernel_module/CMakeFiles/driver.dir/rule
 
 # fast build rule for target.
 driver/fast:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/driver.dir/build.make kernel_module/CMakeFiles/driver.dir/build
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/driver.dir/build.make kernel_module/CMakeFiles/driver.dir/build
 .PHONY : driver/fast
-
-keylogger.o: keylogger.c.o
-
-.PHONY : keylogger.o
-
-# target to build an object file
-keylogger.c.o:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/dummy_target.dir/build.make kernel_module/CMakeFiles/dummy_target.dir/keylogger.c.o
-.PHONY : keylogger.c.o
-
-keylogger.i: keylogger.c.i
-
-.PHONY : keylogger.i
-
-# target to preprocess a source file
-keylogger.c.i:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/dummy_target.dir/build.make kernel_module/CMakeFiles/dummy_target.dir/keylogger.c.i
-.PHONY : keylogger.c.i
-
-keylogger.s: keylogger.c.s
-
-.PHONY : keylogger.s
-
-# target to generate assembly for a file
-keylogger.c.s:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(MAKE) -f kernel_module/CMakeFiles/dummy_target.dir/build.make kernel_module/CMakeFiles/dummy_target.dir/keylogger.c.s
-.PHONY : keylogger.c.s
 
 # Help Target
 help:
@@ -173,13 +146,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... dummy_target"
+	@echo "... rebuild_cache"
+	@echo "... keylogger"
 	@echo "... driver"
-	@echo "... keylogger.o"
-	@echo "... keylogger.i"
-	@echo "... keylogger.s"
 .PHONY : help
 
 
@@ -191,6 +161,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

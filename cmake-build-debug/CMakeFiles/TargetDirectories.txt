@@ -1,4 +1,7 @@
-/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/edit_cache.dir
-/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/keylogger_user.dir
-/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/build_kernel_module.dir
+/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/edit_cache.dir
+/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/keylogger_user.dir
+/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/CMakeFiles/edit_cache.dir
+/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/CMakeFiles/rebuild_cache.dir
+/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/CMakeFiles/keylogger.dir
+/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/CMakeFiles/driver.dir

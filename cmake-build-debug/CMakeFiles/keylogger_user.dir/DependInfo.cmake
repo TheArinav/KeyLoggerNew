@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/tmp.CWNLaQDUow/usr_main.cpp" "/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_main.cpp.o"
-  "/tmp/tmp.CWNLaQDUow/usr_src/kmod_comms/NetlinkReceiver.cpp" "/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o"
+  "/tmp/KeyLoggerNew/usr_main.cpp" "/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_main.cpp.o"
+  "/tmp/KeyLoggerNew/usr_src/kmod_comms/NetlinkReceiver.cpp" "/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

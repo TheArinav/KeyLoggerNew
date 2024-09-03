@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.CWNLaQDUow
+CMAKE_SOURCE_DIR = /tmp/KeyLoggerNew
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.CWNLaQDUow/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/KeyLoggerNew/cmake-build-debug
 
 # Utility rule file for driver.
 
@@ -57,8 +57,8 @@ kernel_module/CMakeFiles/driver: kernel_module/keylogger.ko
 
 
 kernel_module/keylogger.ko: ../kernel_module/keylogger.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating keylogger.ko"
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug/kernel_module && $(MAKE) -C /usr/src/linux-headers-5.15.0-119-generic modules M=/tmp/tmp.CWNLaQDUow/cmake-build-debug/kernel_module src=/tmp/tmp.CWNLaQDUow/kernel_module
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building kernel module keylogger.ko"
+	cd /tmp/KeyLoggerNew/cmake-build-debug/kernel_module && make -C /lib/modules/5.15.0-119-generic/build M=/tmp/KeyLoggerNew/cmake-build-debug/kernel_module modules
 
 driver: kernel_module/CMakeFiles/driver
 driver: kernel_module/keylogger.ko
@@ -72,10 +72,10 @@ kernel_module/CMakeFiles/driver.dir/build: driver
 .PHONY : kernel_module/CMakeFiles/driver.dir/build
 
 kernel_module/CMakeFiles/driver.dir/clean:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug/kernel_module && $(CMAKE_COMMAND) -P CMakeFiles/driver.dir/cmake_clean.cmake
+	cd /tmp/KeyLoggerNew/cmake-build-debug/kernel_module && $(CMAKE_COMMAND) -P CMakeFiles/driver.dir/cmake_clean.cmake
 .PHONY : kernel_module/CMakeFiles/driver.dir/clean
 
 kernel_module/CMakeFiles/driver.dir/depend:
-	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.CWNLaQDUow /tmp/tmp.CWNLaQDUow/kernel_module /tmp/tmp.CWNLaQDUow/cmake-build-debug /tmp/tmp.CWNLaQDUow/cmake-build-debug/kernel_module /tmp/tmp.CWNLaQDUow/cmake-build-debug/kernel_module/CMakeFiles/driver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/KeyLoggerNew/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/KeyLoggerNew /tmp/KeyLoggerNew/kernel_module /tmp/KeyLoggerNew/cmake-build-debug /tmp/KeyLoggerNew/cmake-build-debug/kernel_module /tmp/KeyLoggerNew/cmake-build-debug/kernel_module/CMakeFiles/driver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kernel_module/CMakeFiles/driver.dir/depend
 

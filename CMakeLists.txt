@@ -1,22 +1,13 @@
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
-execute_process (
-        COMMAND bash -c "cmake ../kernel_module"
-        COMMAND bash -c "make ../kernel_module"
-)
-
 project(keylogger VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Step 1: Manually build the kernel module
-add_custom_target(build_kernel_module ALL
-        COMMAND ${CMAKE_COMMAND} --build ${CMAKE_SOURCE_DIR}/kernel_module --target driver
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/kernel_module
-        COMMENT "Building kernel module"
-        )
+# Step 1: Ensure the kernel_module directory exists and build the kernel module
+add_subdirectory(kernel_module)
 
 # Step 2: Proceed with the User Space Application
 file(GLOB_RECURSE USR_SRCS "usr_src/*.c" "usr_src/*.cpp" "usr_src/*.h" "usr_src/*.hpp")

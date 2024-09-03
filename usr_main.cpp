@@ -61,19 +61,15 @@ private:
 
 int main() {
     thread* t_receiver = nullptr;
-    shared_ptr<mutex> m_recv{};
     try {
         KernelModuleManager kmodManager("../../kernel_module/keylogger.ko");
         shared_ptr<NetlinkReceiver> receiver = make_shared<NetlinkReceiver>(NETLINK_USER);
-        t_receiver = new thread([receiver,m_recv]() {
-            {
-                lock_guard<mutex> guard_recv(*m_recv);
-                receiver->startReceiving();
-            }
+        t_receiver = new thread([receiver]() {
+            receiver->startReceiving();
         });
 
         cout << "Key logger running!" << endl;
-        while (true){
+        while (true) {
             string line;
             getline(cin, line);
             if(line == "exit" || line == "q")
@@ -82,14 +78,9 @@ int main() {
 
         cout << "Closing keylogger" << endl;
 
-        // Stop the receiver before unloading the module
-        {
-            lock_guard<mutex> guard_recv(*m_recv);
-            if(receiver)
-                receiver->stopReceiving();
-        }
-
-        if(t_receiver->joinable()) {
+        // Stop the receiver and join the thread
+        receiver->stopReceiving();
+        if (t_receiver->joinable()) {
             t_receiver->join();
         }
 
@@ -102,3 +93,4 @@ int main() {
 
     return EXIT_SUCCESS;
 }
+
