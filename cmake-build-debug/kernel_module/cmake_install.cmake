@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/KeyLoggerNew/kernel_module
+# Install script for directory: /tmp/tmp.AVGFLOf2To/kernel_module
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

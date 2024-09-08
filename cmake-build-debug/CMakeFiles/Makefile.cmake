@@ -54,6 +54,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/keylogger_user.dir/DependInfo.cmake"
-  "kernel_module/CMakeFiles/keylogger.dir/DependInfo.cmake"
   "kernel_module/CMakeFiles/driver.dir/DependInfo.cmake"
   )

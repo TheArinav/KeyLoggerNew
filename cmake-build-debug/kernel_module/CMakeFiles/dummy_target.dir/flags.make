@@ -6,5 +6,5 @@ C_FLAGS = -g -fPIC   -std=gnu11
 
 C_DEFINES = -DMODULE -D__KERNEL__ -Ddummy_target_EXPORTS
 
-C_INCLUDES = -I/usr/src/linux-headers-5.15.0-119-generic/include 
+C_INCLUDES = 
 

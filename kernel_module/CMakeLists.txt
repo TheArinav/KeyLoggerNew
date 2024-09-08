@@ -4,6 +4,9 @@ project(keylogger VERSION 0.1.0 LANGUAGES C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
+# Kernel Module Info
+add_definitions(-D__KERNEL__ -DMODULE)
+
 # Find the kernel release
 execute_process(
         COMMAND uname -r
@@ -11,20 +14,30 @@ execute_process(
         OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-# Set the directory where the kernel module will be built
-set(KERNEL_MODULE_DIR ${CMAKE_CURRENT_BINARY_DIR})
-
-# Build Kernel Module (keylogger.ko) using the kernel build system
-add_custom_command(
-        OUTPUT ${KERNEL_MODULE_DIR}/keylogger.ko
-        COMMAND make -C /lib/modules/${KERNEL_RELEASE}/build M=${KERNEL_MODULE_DIR} modules
-        COMMENT "Building kernel module keylogger.ko"
-        WORKING_DIRECTORY ${KERNEL_MODULE_DIR}
-        DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/keylogger.c
+# Find the kernel headers
+find_path(
+        KERNELHEADERS_DIR
+        include/linux/user.h
+        PATHS /usr/src/linux-headers-${KERNEL_RELEASE}
 )
 
-# Custom target to invoke the build of the kernel module
-add_custom_target(driver ALL DEPENDS ${KERNEL_MODULE_DIR}/keylogger.ko)
+message(STATUS "Kernel release: ${KERNEL_RELEASE}")
+message(STATUS "Kernel headers: ${KERNELHEADERS_DIR}")
 
-# Prevent CMake from trying to compile the kernel module directly
-add_custom_target(keylogger ALL)
+# Build Kernel Module (keylogger.ko)
+set(KMOD_FILE ${CMAKE_CURRENT_BINARY_DIR}/keylogger.ko)
+set(KBUILD_CMD make -C ${KERNELHEADERS_DIR} modules M=${CMAKE_CURRENT_BINARY_DIR} src=${CMAKE_CURRENT_SOURCE_DIR})
+
+file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/Kbuild "obj-m := keylogger.o")
+
+add_custom_command(OUTPUT ${KMOD_FILE}
+        COMMAND ${KBUILD_CMD}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+        DEPENDS keylogger.c
+        COMMENT "Building kernel module keylogger.ko"
+        VERBATIM)
+
+add_custom_target(driver ALL DEPENDS ${KMOD_FILE})
+
+# Optional dummy target - remove if unnecessary
+# add_library(dummy_target MODULE keylogger.c)

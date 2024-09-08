@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/KeyLoggerNew
+CMAKE_SOURCE_DIR = /tmp/tmp.CWNLaQDUow
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/KeyLoggerNew/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.CWNLaQDUow/cmake-build-debug
 
 # Utility rule file for build_kernel_module.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /tmp/KeyLoggerNew/cmake-build-debug
 include CMakeFiles/build_kernel_module.dir/progress.make
 
 CMakeFiles/build_kernel_module:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building kernel module"
-	cd /tmp/KeyLoggerNew/kernel_module && /usr/bin/cmake --build /tmp/KeyLoggerNew/kernel_module --target driver
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building kernel module"
+	cd /tmp/tmp.CWNLaQDUow/kernel_module && /usr/bin/cmake --build /tmp/tmp.CWNLaQDUow/kernel_module --target driver
 
 build_kernel_module: CMakeFiles/build_kernel_module
 build_kernel_module: CMakeFiles/build_kernel_module.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/build_kernel_module.dir/clean:
 .PHONY : CMakeFiles/build_kernel_module.dir/clean
 
 CMakeFiles/build_kernel_module.dir/depend:
-	cd /tmp/KeyLoggerNew/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/KeyLoggerNew /tmp/KeyLoggerNew /tmp/KeyLoggerNew/cmake-build-debug /tmp/KeyLoggerNew/cmake-build-debug /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/build_kernel_module.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/tmp.CWNLaQDUow/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.CWNLaQDUow /tmp/tmp.CWNLaQDUow /tmp/tmp.CWNLaQDUow/cmake-build-debug /tmp/tmp.CWNLaQDUow/cmake-build-debug /tmp/tmp.CWNLaQDUow/cmake-build-debug/CMakeFiles/build_kernel_module.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/build_kernel_module.dir/depend
 

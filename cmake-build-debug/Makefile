@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/KeyLoggerNew
+CMAKE_SOURCE_DIR = /tmp/tmp.AVGFLOf2To
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/KeyLoggerNew/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.AVGFLOf2To/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles /tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/KeyLoggerNew/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,19 +122,6 @@ keylogger_user: cmake_check_build_system
 keylogger_user/fast:
 	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/build
 .PHONY : keylogger_user/fast
-
-#=============================================================================
-# Target rules for targets named keylogger
-
-# Build rule for target.
-keylogger: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 keylogger
-.PHONY : keylogger
-
-# fast build rule for target.
-keylogger/fast:
-	$(MAKE) -f kernel_module/CMakeFiles/keylogger.dir/build.make kernel_module/CMakeFiles/keylogger.dir/build
-.PHONY : keylogger/fast
 
 #=============================================================================
 # Target rules for targets named driver
@@ -212,7 +199,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... keylogger_user"
-	@echo "... keylogger"
 	@echo "... driver"
 	@echo "... usr_main.o"
 	@echo "... usr_main.i"

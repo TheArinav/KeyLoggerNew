@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/KeyLoggerNew
+# Install script for directory: /tmp/tmp.AVGFLOf2To
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/tmp/KeyLoggerNew/cmake-build-debug/kernel_module/cmake_install.cmake")
+  include("/tmp/tmp.AVGFLOf2To/cmake-build-debug/kernel_module/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/tmp/KeyLoggerNew/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/tmp/tmp.AVGFLOf2To/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
