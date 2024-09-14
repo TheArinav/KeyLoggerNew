@@ -58,7 +58,7 @@ kernel_module/CMakeFiles/driver: kernel_module/keylogger.ko
 
 kernel_module/keylogger.ko: ../kernel_module/keylogger.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building kernel module keylogger.ko"
-	cd /tmp/tmp.AVGFLOf2To/cmake-build-debug/kernel_module && make -C /usr/src/linux-headers-5.15.0-119-generic modules M=/tmp/tmp.AVGFLOf2To/cmake-build-debug/kernel_module src=/tmp/tmp.AVGFLOf2To/kernel_module
+	cd /tmp/tmp.AVGFLOf2To/cmake-build-debug/kernel_module && make -C /usr/src/linux-headers-5.15.0-121-generic modules M=/tmp/tmp.AVGFLOf2To/cmake-build-debug/kernel_module src=/tmp/tmp.AVGFLOf2To/kernel_module
 
 driver: kernel_module/CMakeFiles/driver
 driver: kernel_module/keylogger.ko

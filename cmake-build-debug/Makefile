@@ -163,6 +163,33 @@ usr_main.cpp.s:
 	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_main.cpp.s
 .PHONY : usr_main.cpp.s
 
+usr_src/client/ServerConnection.o: usr_src/client/ServerConnection.cpp.o
+
+.PHONY : usr_src/client/ServerConnection.o
+
+# target to build an object file
+usr_src/client/ServerConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o
+.PHONY : usr_src/client/ServerConnection.cpp.o
+
+usr_src/client/ServerConnection.i: usr_src/client/ServerConnection.cpp.i
+
+.PHONY : usr_src/client/ServerConnection.i
+
+# target to preprocess a source file
+usr_src/client/ServerConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.i
+.PHONY : usr_src/client/ServerConnection.cpp.i
+
+usr_src/client/ServerConnection.s: usr_src/client/ServerConnection.cpp.s
+
+.PHONY : usr_src/client/ServerConnection.s
+
+# target to generate assembly for a file
+usr_src/client/ServerConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.s
+.PHONY : usr_src/client/ServerConnection.cpp.s
+
 usr_src/kmod_comms/NetlinkReceiver.o: usr_src/kmod_comms/NetlinkReceiver.cpp.o
 
 .PHONY : usr_src/kmod_comms/NetlinkReceiver.o
@@ -190,6 +217,60 @@ usr_src/kmod_comms/NetlinkReceiver.cpp.s:
 	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.s
 .PHONY : usr_src/kmod_comms/NetlinkReceiver.cpp.s
 
+usr_src/server/Connection.o: usr_src/server/Connection.cpp.o
+
+.PHONY : usr_src/server/Connection.o
+
+# target to build an object file
+usr_src/server/Connection.cpp.o:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o
+.PHONY : usr_src/server/Connection.cpp.o
+
+usr_src/server/Connection.i: usr_src/server/Connection.cpp.i
+
+.PHONY : usr_src/server/Connection.i
+
+# target to preprocess a source file
+usr_src/server/Connection.cpp.i:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.i
+.PHONY : usr_src/server/Connection.cpp.i
+
+usr_src/server/Connection.s: usr_src/server/Connection.cpp.s
+
+.PHONY : usr_src/server/Connection.s
+
+# target to generate assembly for a file
+usr_src/server/Connection.cpp.s:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.s
+.PHONY : usr_src/server/Connection.cpp.s
+
+usr_src/server/ServerMain.o: usr_src/server/ServerMain.cpp.o
+
+.PHONY : usr_src/server/ServerMain.o
+
+# target to build an object file
+usr_src/server/ServerMain.cpp.o:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o
+.PHONY : usr_src/server/ServerMain.cpp.o
+
+usr_src/server/ServerMain.i: usr_src/server/ServerMain.cpp.i
+
+.PHONY : usr_src/server/ServerMain.i
+
+# target to preprocess a source file
+usr_src/server/ServerMain.cpp.i:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.i
+.PHONY : usr_src/server/ServerMain.cpp.i
+
+usr_src/server/ServerMain.s: usr_src/server/ServerMain.cpp.s
+
+.PHONY : usr_src/server/ServerMain.s
+
+# target to generate assembly for a file
+usr_src/server/ServerMain.cpp.s:
+	$(MAKE) -f CMakeFiles/keylogger_user.dir/build.make CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.s
+.PHONY : usr_src/server/ServerMain.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -203,9 +284,18 @@ help:
 	@echo "... usr_main.o"
 	@echo "... usr_main.i"
 	@echo "... usr_main.s"
+	@echo "... usr_src/client/ServerConnection.o"
+	@echo "... usr_src/client/ServerConnection.i"
+	@echo "... usr_src/client/ServerConnection.s"
 	@echo "... usr_src/kmod_comms/NetlinkReceiver.o"
 	@echo "... usr_src/kmod_comms/NetlinkReceiver.i"
 	@echo "... usr_src/kmod_comms/NetlinkReceiver.s"
+	@echo "... usr_src/server/Connection.o"
+	@echo "... usr_src/server/Connection.i"
+	@echo "... usr_src/server/Connection.s"
+	@echo "... usr_src/server/ServerMain.o"
+	@echo "... usr_src/server/ServerMain.i"
+	@echo "... usr_src/server/ServerMain.s"
 .PHONY : help
 
 

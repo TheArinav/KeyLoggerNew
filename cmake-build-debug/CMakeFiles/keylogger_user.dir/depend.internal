@@ -3,7 +3,10 @@
 
 CMakeFiles/keylogger_user.dir/usr_main.cpp.o
  /tmp/tmp.AVGFLOf2To/usr_main.cpp
+ /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.h
  /tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.hpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.hpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.hpp
  /usr/include/libnl3/netlink/errno.h
  /usr/include/libnl3/netlink/handlers.h
  /usr/include/libnl3/netlink/list.h
@@ -15,9 +18,17 @@ CMakeFiles/keylogger_user.dir/usr_main.cpp.o
  /usr/include/libnl3/netlink/types.h
  /usr/include/libnl3/netlink/utils.h
  /usr/include/libnl3/netlink/version.h
+CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o
+ /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.cpp
+ /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.h
+ /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.hpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.hpp
 CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o
+ /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.h
  /tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.cpp
  /tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.hpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.hpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.hpp
  /usr/include/libnl3/netlink/errno.h
  /usr/include/libnl3/netlink/handlers.h
  /usr/include/libnl3/netlink/list.h
@@ -29,3 +40,10 @@ CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o
  /usr/include/libnl3/netlink/types.h
  /usr/include/libnl3/netlink/utils.h
  /usr/include/libnl3/netlink/version.h
+CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o
+ /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.cpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.hpp
+CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o
+ /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.hpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.cpp
+ /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.hpp

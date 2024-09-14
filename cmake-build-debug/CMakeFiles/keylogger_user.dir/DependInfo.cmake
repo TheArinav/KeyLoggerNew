@@ -5,7 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/tmp/tmp.AVGFLOf2To/usr_main.cpp" "/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_main.cpp.o"
+  "/tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.cpp" "/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o"
   "/tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.cpp" "/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o"
+  "/tmp/tmp.AVGFLOf2To/usr_src/server/Connection.cpp" "/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o"
+  "/tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.cpp" "/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

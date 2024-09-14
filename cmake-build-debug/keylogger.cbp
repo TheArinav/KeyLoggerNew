@@ -99,10 +99,28 @@
 		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_main.cpp">
 			<Option target="keylogger_user"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.cpp">
+			<Option target="keylogger_user"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.h">
+			<Option target="keylogger_user"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.cpp">
 			<Option target="keylogger_user"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.hpp">
+			<Option target="keylogger_user"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/server/Connection.cpp">
+			<Option target="keylogger_user"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/server/Connection.hpp">
+			<Option target="keylogger_user"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.cpp">
+			<Option target="keylogger_user"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.hpp">
 			<Option target="keylogger_user"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.AVGFLOf2To/CMakeLists.txt">

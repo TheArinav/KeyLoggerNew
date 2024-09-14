@@ -57,9 +57,22 @@ include CMakeFiles/keylogger_user.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/keylogger_user.dir/flags.make
 
+CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o: CMakeFiles/keylogger_user.dir/flags.make
+CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o: ../usr_src/client/ServerConnection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o -c /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.cpp
+
+CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.cpp > CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.i
+
+CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.AVGFLOf2To/usr_src/client/ServerConnection.cpp -o CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.s
+
 CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o: CMakeFiles/keylogger_user.dir/flags.make
 CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o: ../usr_src/kmod_comms/NetlinkReceiver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o -c /tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.cpp
 
 CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.i: cmake_force
@@ -70,9 +83,35 @@ CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.AVGFLOf2To/usr_src/kmod_comms/NetlinkReceiver.cpp -o CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.s
 
+CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o: CMakeFiles/keylogger_user.dir/flags.make
+CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o: ../usr_src/server/Connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o -c /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.cpp
+
+CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.cpp > CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.i
+
+CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.AVGFLOf2To/usr_src/server/Connection.cpp -o CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.s
+
+CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o: CMakeFiles/keylogger_user.dir/flags.make
+CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o: ../usr_src/server/ServerMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o -c /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.cpp
+
+CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.cpp > CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.i
+
+CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.AVGFLOf2To/usr_src/server/ServerMain.cpp -o CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.s
+
 CMakeFiles/keylogger_user.dir/usr_main.cpp.o: CMakeFiles/keylogger_user.dir/flags.make
 CMakeFiles/keylogger_user.dir/usr_main.cpp.o: ../usr_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/keylogger_user.dir/usr_main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/keylogger_user.dir/usr_main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/keylogger_user.dir/usr_main.cpp.o -c /tmp/tmp.AVGFLOf2To/usr_main.cpp
 
 CMakeFiles/keylogger_user.dir/usr_main.cpp.i: cmake_force
@@ -85,17 +124,23 @@ CMakeFiles/keylogger_user.dir/usr_main.cpp.s: cmake_force
 
 # Object files for target keylogger_user
 keylogger_user_OBJECTS = \
+"CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o" \
 "CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o" \
+"CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o" \
+"CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o" \
 "CMakeFiles/keylogger_user.dir/usr_main.cpp.o"
 
 # External object files for target keylogger_user
 keylogger_user_EXTERNAL_OBJECTS =
 
+bin/keylogger_user: CMakeFiles/keylogger_user.dir/usr_src/client/ServerConnection.cpp.o
 bin/keylogger_user: CMakeFiles/keylogger_user.dir/usr_src/kmod_comms/NetlinkReceiver.cpp.o
+bin/keylogger_user: CMakeFiles/keylogger_user.dir/usr_src/server/Connection.cpp.o
+bin/keylogger_user: CMakeFiles/keylogger_user.dir/usr_src/server/ServerMain.cpp.o
 bin/keylogger_user: CMakeFiles/keylogger_user.dir/usr_main.cpp.o
 bin/keylogger_user: CMakeFiles/keylogger_user.dir/build.make
 bin/keylogger_user: CMakeFiles/keylogger_user.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/keylogger_user"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.AVGFLOf2To/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/keylogger_user"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/keylogger_user.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,6 +1,6 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /tmp/tmp.AVGFLOf2To -B /tmp/tmp.AVGFLOf2To/cmake-build-debug
--- Kernel release: 5.15.0-119-generic
--- Kernel headers: /usr/src/linux-headers-5.15.0-119-generic
+-- Kernel release: 5.15.0-121-generic
+-- Kernel headers: /usr/src/linux-headers-5.15.0-121-generic
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /tmp/tmp.AVGFLOf2To/cmake-build-debug
